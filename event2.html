@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue3</title>
+    <script src="js/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3"></script> -->
+    <!-- <script src="https:unpkg.com/vue@3"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.js"></script>
+</head>
+<body>
+    <div id="container" class="container">
+        <div>
+            <label>First name:</label><br/>
+            <input type="text" v-model='newPerson.firstName'>
+        </div>
+        <div>
+            <label>Last name: </label><br/>
+            <input type="text" v-model="newPerson.lastName">
+        </div>
+        <button v-on:click="sendIdentity()">Submit</button>       
+    </div>    
+    <script src="myjscode.js"></script>
+</body>
+</html>
