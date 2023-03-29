@@ -6,7 +6,7 @@ $obj = new \ECPay_AllInOne();
 //服務參數
 //$obj->ServiceURL  = $_POST['ServiceURL'];
 
-$obj->MerchantID  = '2000132';
+$obj->MerchantID  = '2000214';
 $obj->HashKey     = '5294y06JbISpM5x9';
 $obj->HashIV      = 'v77hoKGq4kWxNNIS';
 
@@ -21,10 +21,10 @@ $obj->Send['ChoosePayment'] = $_POST['ChoosePayment'];
 //$obj->Send['CreditInstallment'] = $_POST['CreditInstallment'];
 
 $obj->ServiceURL = "https://payment-stage.ecpay.com.tw/Cashier/AioCheckOut/V5";
-$obj->Send['ReturnURL'] = "https://ble.com.tw/test/ECPay_ReturnURL.php";
+$obj->Send['ReturnURL'] = "https://1acf-114-24-170-87.jp.ngrok.io/ECPay/ECPay_ReturnURL.php";
 //$obj->Send['OrderResultURL'] = "https://ble.com.tw/test/ECPay_OrderResultURL.php";
  
-$obj->Send['ClientBackURL'] = "https://ble.com.tw/test/ECPay_ClientBackURL.php"; //ECPay顯示交易結果頁.裡面帶出返回商店按鈕
+$obj->Send['ClientBackURL'] = "https://tw.yahoo.com/"; //ECPay顯示交易結果頁.裡面帶出返回商店按鈕
  
  
 $obj->Send['CustomField1']      = date('Y/m/d H:i:s');  	//額外的欄位

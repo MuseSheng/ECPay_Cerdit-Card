@@ -53,6 +53,33 @@
             mounted() { // 非同步通常放 mounted 裡，有些人放 created
                 //axios
                 axios.get('event.json').then(res => this.informations = res.data) 
+
+
+                axios({
+                    method: 'post',
+                    url: '/user/12345',
+                    data: {
+                        firstName: 'Fred',
+                        lastName: 'Flintstone'
+                    }
+                });
+                //  GET 请求远程图片
+                axios({
+                method:'get',
+                url:'http://bit.ly/2mTM3nY',
+                responseType:'stream'
+                })
+                .then(function(response) {
+                response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+                });
+                axios(url[, config])
+                // 发送 GET 请求（默认的方法）
+                axios('/user/12345');
+
+
+
+
+
             },
         })
         App.mount('#app')

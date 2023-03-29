@@ -1,4 +1,8 @@
 <?php
+
+include("conn.php");
+
+
 //include "db_func.php"; 
 require_once 'ECPay.Payment.Integration.php';
  
@@ -40,6 +44,15 @@ if ( $_POST['RtnCode'] =='1' && $CheckMacValue == $_POST['CheckMacValue'] ){
     // 
     // 要處理的程式放在這裡，例如將線上服務啟用、更新訂單資料庫付款資訊等
     // 
+    //建立SQL
+    //$sql = "INSERT INTO member(Account, PWD, CreateDate) VALUES ('王小明', 'abc123', NOW())";
+
+    $sql = "INSERT INTO EVENT_ORDER(ID, CREATE_TIME, ACTIVITY_ID, PAYMENT, USER_ID) VALUES ('00001', NOW(), '00001', '')";
+
+
+
+    //執行
+    $pdo->exec($sql);
 }
  
 // 接收到資訊回應綠界
